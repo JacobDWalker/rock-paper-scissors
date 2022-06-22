@@ -1,6 +1,6 @@
 
+
 body {
-    
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -36,7 +36,7 @@ body {
 
 .icons {
     display: flex;
-    flex: auto;
+    flex: 1;
     gap: 150px;
     background-color: #9abd97;
     align-items: center;
@@ -71,12 +71,35 @@ footer {
 
 .icon {
     width: 200px;
-    height: 200px;
+    height: auto;
     outline: #483d03;
     border:1px solid #483d03;
     border-radius: 8px;
     padding: 50px;
+    flex-shrink: 1;
 }
+
+#button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-button {
+    background-color: inherit;
+    color: #483d03;
+    font-family: inherit;
+    font-size: 48px;
+    border:1px solid #483d03;
+    border-radius: 8px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+
+
 
 a {
     color: inherit;
