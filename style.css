@@ -1,6 +1,7 @@
 
 
 body {
+    font-family: Roboto, 'Times New Roman', Times, serif;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -98,8 +99,6 @@ footer {
     padding-bottom: 24px;
 
 }
-
-
 
 a {
     color: inherit;
