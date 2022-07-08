@@ -26,7 +26,6 @@ function playRound(playerMove) {
         gameResultDiv.textContent = "You Lost"
     }
     roundCount++;
-    updateScores();
 }
 
 function selectMoveIcon(move) {
@@ -43,6 +42,22 @@ function updateScores() {
     roundTracker.textContent = roundCount.toString();
     userScoreDiv.textContent = userScore.toString();
     computerScoreDiv.textContent = computerScore.toString();
+}
+
+function isWinner () {
+    return userScore === 3 || computerScore === 3;
+}
+
+function gameOver() {
+    iconsDiv.style.display = 'none';
+    let winner;
+    if (userScore === 3) {
+        winner = "You";
+    } else {
+        winner = "The Computer"
+    }
+    gameOverDiv.textContent = `Game Over! ${winner} won!`;
+
 }
 
 
@@ -63,6 +78,7 @@ restartButton.style.display = 'none';
 let userScoreDiv = document.getElementById('user-score');
 let computerScoreDiv = document.getElementById('computer-score');
 let roundTracker = document.getElementById('round-tracker');
+let gameOverDiv = document.getElementById('game-over');
 
 // Initializing scores and round count
 userScoreDiv.textContent = "0";
@@ -76,7 +92,7 @@ let gameResultDiv = document.getElementById('game-outcome');
 let computerMoves = document.getElementById('computer-moves');
 let userMoves = document.getElementById('user-moves');
 
-// Create smaller icons for move breakdown
+// Create rock, paper, scissors icons for game board
 let rock = document.createElement("img");
 rock.src = '/image/rock.png';
 rock.alt = "rock"
@@ -99,7 +115,11 @@ scissors.height = 50;
 
 
 moveIcons.forEach((icon) => icon.addEventListener('click', (e) =>  {
-    playRound(e.target.getAttribute('data-key'))
+    playRound(e.target.getAttribute('data-key'));
+    updateScores();
+    if (isWinner()) {
+        gameOver();
+    }
 }))
 
 playButton.addEventListener('click', () => {
@@ -116,4 +136,6 @@ restartButton.addEventListener('click', () => {
     gameResultDiv.textContent = "";
     computerMoves.textContent = "";
     userMoves.textContent = "";
+    iconsDiv.style.display = 'flex';
+    gameOverDiv.textContent = "";
 })

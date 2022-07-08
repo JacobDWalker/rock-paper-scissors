@@ -17,14 +17,22 @@ body {
     
 }
 
-#title {
+.title {
     font-family: Roboto, sans-serif;
-    font-size: 78px;
-    font-weight: bold;
-    padding: 24px;
     color: #483d03;
     display: flex;
     justify-content: center;
+}
+
+#title {
+    font-size: 78px;
+    padding: 24px;
+    font-weight: bold;
+}
+
+#sub-title {
+    font-size: 48px;
+    font-style: italic;
 }
 
 .counters {
@@ -33,6 +41,7 @@ body {
     color: #483d03;
     display: flex;
     justify-content: space-evenly;
+    padding: 24px;
 }
 
 .counter {
@@ -56,8 +65,10 @@ body {
 
 .game-board {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: inherit;
-    font-size: 24px;
+    font-size: 48px;
     color: #483d03;
     flex-direction: column;
     gap: 24px;
@@ -69,6 +80,7 @@ body {
     gap: 150px;
     background-color: #9abd97;
     align-items: center;
+    margin: 24px;
 }
 
 .icons-body {
@@ -84,9 +96,18 @@ body {
 
 .icons-title {
     color: #483d03;
-    font-weight: 400;
-    font-size: 64px;
-    padding: 24px;
+    font-weight: 900;
+    font-size: 48px;
+    padding-top: 24px;
+}
+
+#game-over {
+    font-size: 78px;
+    font-weight: bolder;
+    color: #483d03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -99,7 +120,7 @@ footer {
 }
 
 .icon {
-    width: 200px;
+    width: 150px;
     height: auto;
     outline: #483d03;
     border:1px solid #483d03;
@@ -137,9 +158,6 @@ button:hover {
     background-color: #483d03;
     color: #9abd97;
 }
-
-
-
 
 a {
     color: inherit;
