@@ -18,7 +18,7 @@ body {
 }
 
 #title {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 78px;
     font-weight: bold;
     padding: 24px;
@@ -28,11 +28,39 @@ body {
 }
 
 .counters {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 24px;
     color: #483d03;
     display: flex;
     justify-content: space-evenly;
+}
+
+.counter {
+    display: flex;
+    gap: 6px;
+}
+
+#moves {
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    font-weight: bold;
+}
+
+#game-outcome {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.game-board {
+    display: flex;
+    font-family: inherit;
+    font-size: 24px;
+    color: #483d03;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .icons {
@@ -44,7 +72,7 @@ body {
 }
 
 .icons-body {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 24px;
     color: #483d03;
     background-color: #9abd97;
@@ -80,25 +108,38 @@ footer {
     flex-shrink: 1;
 }
 
+.icon:hover {
+    margin: -2px;
+    border-width: 3px;
+}
+
+.icon:active {
+    background-color: #b6d7b9;
+}
+
 #button-container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#play-button {
+button {
     background-color: inherit;
     color: #483d03;
     font-family: inherit;
     font-size: 48px;
     border:1px solid #483d03;
     border-radius: 8px;
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
+    padding: 24px 48px;
 }
+
+button:hover {
+    background-color: #483d03;
+    color: #9abd97;
+}
+
+
+
 
 a {
     color: inherit;

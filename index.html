@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="game-logic.js"></script>
+    <script src="game-logic.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -13,27 +13,36 @@
 
         <div id="title">Rock Paper Scissors</div>
         <div class="counters">
-            <div class="counter" id="user-score">Your Score: </div>
-            <div class="counter" id="computer-score">Computer Score: </div>
-            <div class="counter" id="game-tracker">Game: </div>
+            <div class="counter" id="user-score-container">User Score: <div id="user-score"></div></div>
+            <div class="counter" id="computer-score-container">Computer Score: <div id="computer-score"></div></div>
+            <div class="counter" id="round-tracker-container">Round: <div id="round-tracker"></div></div>
         </div>
 
     </div>
 
     <div id="button-container">
         <button id="play-button">Play</button>
+        <button id="restart-button">Restart</button>
     </div>
 
     <div class="icons-body">
         <div class="icons-title">Choose Your Move</div>
         <div class="icons">
-            <input type="image" class="icon" src="./image/rock.png" id="rock">
-            <input type="image" class="icon" src="./image/paper.png" id="paper">
-            <input type="image" class="icon" src="./image/scissors.png" id="scissors">
+            <img class="icon" src="./image/rock.png" id="rock" data-key="0" alt="Rock icon, use to select rock as your move">
+            <img class="icon" src="./image/paper.png" id="paper" data-key="1" alt="Paper icon, use to select paper as your move">
+            <img class="icon" src="./image/scissors.png" id="scissors" data-key="2" alt="Scissors icon, use to select scissors as your move">
         </div>
     </div>
 
-    <div class="game-board"></div>
+    <div class="game-board">
+
+        <div id="moves">
+            <div id="user-moves"></div>
+            <div id="computer-moves"></div>
+        </div>
+        <div id="game-outcome"></div>
+
+    </div>
 
 
     <footer>
