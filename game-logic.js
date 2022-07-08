@@ -94,19 +94,19 @@ let userMoves = document.getElementById('user-moves');
 
 // Create rock, paper, scissors icons for game board
 let rock = document.createElement("img");
-rock.src = '/image/rock.png';
+rock.src = './image/rock.png';
 rock.alt = "rock"
 rock.width = 50;
 rock.height = 50;
 
 let paper = document.createElement("img");
-paper.src = '/image/paper.png';
+paper.src = './image/paper.png';
 paper.alt = "paper"
 paper.width = 50;
 paper.height = 50;
 
 let scissors = document.createElement("img");
-scissors.src = '/image/scissors.png';
+scissors.src = './image/scissors.png';
 scissors.alt = "scissors"
 scissors.width = 50;
 scissors.height = 50;
